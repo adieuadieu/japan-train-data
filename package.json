@@ -27,18 +27,26 @@
     "ava": "ava",
     "lint": "npm run lint:eslint -s",
     "lint:eslint": "eslint $npm_package_config_jsSrc",
-    "coverage": "nyc report"
+    "coverage": "nyc report",
+    "generate": "babel-node src/index.js"
   },
   "dependencies": {
     "@google-cloud/translate": "^0.8.1",
+    "@google/maps": "^0.3.1",
     "awaiting": "^2.2.0",
-    "dotenv": "^4.0.0"
+    "axios": "^0.16.1",
+    "babel-cli": "^6.24.1",
+    "delay": "^2.0.0",
+    "dotenv": "^4.0.0",
+    "jsonfile": "^3.0.0",
+    "p-queue": "^1.0.0",
+    "ramda": "^0.23.0",
+    "xml2js": "^0.4.17"
   },
   "devDependencies": {
     "ava": "^0.19.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
-    "babel-loader": "^6.4.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.4.0",
@@ -56,9 +64,9 @@
     "nyc": "^10.2.0"
   },
   "ava": {
-      "require": "babel-register",
-      "babel": "inherit"
-    },
+    "require": "babel-register",
+    "babel": "inherit"
+  },
   "babel": {
     "sourceMaps": "inline",
     "plugins": [
@@ -98,6 +106,10 @@
     },
     "rules": {
       "no-console": 0,
+      "max-len": [
+        "error",
+        80
+      ],
       "semi": [
         "error",
         "never"
