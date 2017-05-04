@@ -9,3 +9,9 @@ A recursive object of train 🚂  data for Japan 🇯🇵 including translations
 
 1. Some of the translations are clearly crap.
 1. In many cases, transliteration would be better than translation, but there's no API? Suggestions?
+
+### Todo
+
+[ ] npm package
+[ ] unit tests
+[ ] ci integrations
