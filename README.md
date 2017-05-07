@@ -20,7 +20,7 @@ console.log(...stations)
 
 ## Just gimme the data
 
-Sure. (`data/raw-data.json`)[https://github.com/adieuadieu/japan-train-data/blob/master/data/raw-data.json].
+Sure. [`data/raw-data.json`](https://github.com/adieuadieu/japan-train-data/blob/master/data/raw-data.json).
 
 
 ### Known Issues
