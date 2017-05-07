@@ -1,24 +1,26 @@
 {
   "name": "japan-train-data",
-  "version": "0.0.1-alpha.3",
-  "description": "Scripts to generate train data for Japan, with translations, and an npm package for convenience",
+  "version": "0.0.1-alpha.8",
+  "description": "A recursive object of train data for Japan including translations & station geocoding",
   "author": "Marco Lüthy <marco@luethy.net>",
   "keywords": [
     "japan",
     "train",
+    "station",
+    "line",
     "data"
   ],
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.es.js",
   "files": [
-    "lib/raw-data.json",
-    "src/index.js"
+    "dist/bundle.cjs.js",
+    "dist/bundle.es.js"
   ],
   "repository": "git@github.com:adieuadieu/japan-train-data.git",
   "bugs": {
-    "url": "https://github.com/adieuadieu/serverless-chrome/issues"
+    "url": "https://github.com/adieuadieu/japan-train-data/issues"
   },
-  "homepage": "https://github.com/adieuadieu/serverless-chrome",
+  "homepage": "https://github.com/adieuadieu/japan-train-data",
   "license": "MIT",
   "engines": {
     "node": ">= 6.1"
@@ -37,7 +39,7 @@
     "prepack": "prepack src/index.js --out lib/index.js",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "pre-publish": "yarn build && yarn publish"
+    "prepublish": "rm -Rf dist/ && yarn build"
   },
   "dependencies": {},
   "devDependencies": {
