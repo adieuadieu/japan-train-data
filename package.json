@@ -1,6 +1,6 @@
 {
   "name": "japan-train-data",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.3",
   "description": "Scripts to generate train data for Japan, with translations, and an npm package for convenience",
   "author": "Marco Lüthy <marco@luethy.net>",
   "keywords": [
@@ -36,11 +36,10 @@
     "generate": "babel-node src/make.js",
     "prepack": "prepack src/index.js --out lib/index.js",
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "pre-publish": "yarn build && yarn publish"
   },
-  "dependencies": {
-    "jsonfile": "^3.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@google-cloud/translate": "^0.8.1",
     "@google/maps": "^0.3.1",
@@ -66,6 +65,7 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-tap": "^2.0.0",
+    "jsonfile": "^3.0.0",
     "minimist": "^1.2.0",
     "nyc": "^10.3.0",
     "p-queue": "^1.0.0",
