@@ -22,6 +22,28 @@ console.log(...stations)
 
 Sure. [`data/raw-data.json`](https://github.com/adieuadieu/japan-train-data/blob/master/data/raw-data.json).
 
+## Generating the data
+
+First clone the project:
+
+```bash
+git clone https://github.com/adieuadieu/japan-train-data.git
+```
+
+Set up your environment with Google Cloud keys. To generate the data you need API access to Google's Translation and Geocoding APIs.
+
+```bash
+echo GCP_PROJECT=your-gcp-project-id-here >> .env
+GCP_API_KEY=your-google-maps-api-key-here >> .env
+GCP_KEYFILE=./gcp-keyfile.json >> .env
+```
+
+Then to start generating data:
+
+```bash
+yarn generate
+```
+
 
 ### Known Issues
 
