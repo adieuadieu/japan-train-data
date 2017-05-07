@@ -13,18 +13,12 @@ A recursive object of train data for Japan including translations & station geoc
 ```js
 import { prefectures, lines, stations } from 'japan-train-data'
 
-console.log(...prefectures)
-console.log(...lines)
-console.log(...stations)
-```
-
-
-```js
 console.log(prefectures.find(({ id }) => id === 13))
 
+/*
 {
   id: 13,
-  name: { ja: '東京都', en: 'Tokyo', 'zh-CN': '东京', ko: '도쿄도' },
+  name: { ja: '東京都', en: 'Tokyo' },
   lines: [
     {
       id: 11301,
@@ -35,36 +29,19 @@ console.log(prefectures.find(({ id }) => id === 13))
       stations: [Object],
       prefecture: [Circular],
     },
-    {
-      id: 11302,
-      name: [Object],
-      lat: 35.69302730762992,
-      lng: 139.73522275686264,
-      zoom: 12,
-      stations: [Object],
-      prefecture: [Circular],
-    },
-    {
-      id: 11303,
-      name: [Object],
-      lat: 35.62126801796464,
-      lng: 139.5621831285025,
-      zoom: 11,
-      stations: [Object],
-      prefecture: [Circular],
-    },
+    ...
   ],
 }
+*/
 
 console.log(lines.find(({ id }) => id === 11302))
 
+/*
 {
   id: 11302,
   name: {
     ja: 'JR山手線',
     en: 'JR Yamanote Line',
-    'zh-CN': 'JR山手线',
-    ko: 'JR 야마노 테선',
   },
   lat: 35.69302730762992,
   lng: 139.73522275686264,
@@ -72,7 +49,6 @@ console.log(lines.find(({ id }) => id === 11302))
   stations: [
     {
       id: 1130201,
-      gid: 1130201,
       name: [Object],
       location: [Object],
       lines: [Object],
@@ -80,107 +56,67 @@ console.log(lines.find(({ id }) => id === 11302))
     },
     {
       id: 1130202,
-      gid: 1130202,
       name: [Object],
       location: [Object],
       lines: [Object],
       prefecture: [Object],
     },
-    {
-      id: 1130203,
-      gid: 1130203,
-      name: [Object],
-      location: [Object],
-      lines: [Object],
-      prefecture: [Object],
-    },
-    {
-      id: 1130204,
-      gid: 1130204,
-      name: [Object],
-      location: [Object],
-      lines: [Object],
-      prefecture: [Object],
-    },
-    {
-      id: 1130205,
-      gid: 1130205,
-      name: [Object],
-      location: [Object],
-      lines: [Object],
-      prefecture: [Object],
-    },
+    ...
   ],
   prefecture: {
     id: 13,
-    name: { ja: '東京都', en: 'Tokyo', 'zh-CN': '东京', ko: '도쿄도' },
+    name: { ja: '東京都', en: 'Tokyo' },
     lines: [[Object], [Circular], [Object]],
   },
 }
+*/
 
 console.log(stations.find(({ prefecture: { id } }) => id === 13))
 
+/*
 {
   id: 1130101,
-  gid: 1130101,
-  name: { ja: '東京', en: 'Tokyo', 'zh-CN': '东京', ko: '도쿄' },
+  name: { ja: '東京', en: 'Tokyo' },
   location: {
     lat: 35.681391,
     lng: 139.766103,
-    countryCode: { en: 'JP', 'zh-CN': 'JP', ko: 'JP', ja: 'JP' },
+    countryCode: { en: 'JP', ja: 'JP' },
     postalCode: {
       en: '100-0005',
-      'zh-CN': '100-0005',
-      ko: '100-0005',
       ja: '100-0005',
     },
     administrativeArea1: {
       en: 'Tōkyō-to',
-      'zh-CN': 'Tōkyō-to',
-      ko: 'Tōkyō-to',
       ja: '東京都',
     },
-    ward: {},
     locality1: {
       en: 'Chiyoda-ku',
-      'zh-CN': 'Chiyoda-ku',
-      ko: 'Chiyoda-ku',
       ja: '千代田区',
     },
     sublocality1: {
       en: 'Marunouchi',
-      'zh-CN': 'Marunouchi',
-      ko: 'Marunouchi',
       ja: '丸の内',
     },
     sublocality2: {
       en: '1 Chome',
-      'zh-CN': '1 Chome',
-      ko: '1 Chome',
       ja: '１丁目',
     },
-    sublocality3: { en: '9', 'zh-CN': '9', ko: '9', ja: '９' },
-    sublocality4: { en: '1', 'zh-CN': '1', ko: '1', ja: '１' },
+    sublocality3: { en: '9', ja: '９' },
+    sublocality4: { en: '1', ja: '１' },
   },
   lines: [
     { id: 11301, name: [Object] },
     { id: 11302, name: [Object] },
     { id: 11308, name: [Object] },
-    { id: 11311, name: [Object] },
-    { id: 11312, name: [Object] },
-    { id: 11314, name: [Object] },
-    { id: 11326, name: [Object] },
-    { id: 11328, name: [Object] },
-    { id: 11332, name: [Object] },
-    { id: 11343, name: [Object] },
-    { id: 28002, name: [Object] },
+    ...
   ],
   prefecture: {
     id: 13,
-    name: { ja: '東京都', en: 'Tokyo', 'zh-CN': '东京', ko: '도쿄도' },
+    name: { ja: '東京都', en: 'Tokyo' },
     lines: [[Object], [Object], [Object]],
   },
 }
+*/
 ```
 
 ## Just gimme the data
