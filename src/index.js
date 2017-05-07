@@ -1,7 +1,7 @@
 import data from '../data/raw-data.json'
 
 // basically the only time that i've ever used forEach instead of map
-// turn 'data' into a recursive structure
+// turn 'data' into a circular structure
 data.forEach((prefecture) => {
   prefecture.lines.forEach((line) => {
     line.prefecture = prefecture
