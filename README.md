@@ -2,7 +2,7 @@
 
 Choo choo.
 
-A recursive object of train data for Japan including translations & station geocoding _and_ a tool to generate it. Access train data by prefecture, by lines, or by stations.
+A circular object of train data for Japan including translations & station geocoding _and_ a tool to generate it. Access train data by prefecture, by lines, or by stations.
 
 ## Install
 
