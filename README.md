@@ -18,6 +18,11 @@ console.log(...lines)
 console.log(...stations)
 ```
 
+## Just gimme the data
+
+Sure. (`data/raw-data.json`)[https://github.com/adieuadieu/japan-train-data/blob/master/data/raw-data.json].
+
+
 ### Known Issues
 
 1. Some of the translations are clearly crap.
