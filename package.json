@@ -1,6 +1,6 @@
 {
   "name": "japan-train-data",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A circular object of train data for Japan including translations & station geocoding",
   "author": "Marco Lüthy <marco@luethy.net>",
   "keywords": [
