@@ -25,13 +25,15 @@ export default function generate () {
 
       const prefectureName = getTranslations(prefecture.name)
 
-      const lines = await Promise.all(
-        prefecture.lines.slice(0, 3).map(async ({ id: lineId }) => {
+      const lines = Promise.all(
+        prefecture.lines.map(async ({ id: lineId }) => {
           const line = await ekiDataQueue.add(() => getLine(lineId))
           const lineName = getTranslations(line.name)
 
+          console.log('Processing line:', lineId, line.name)
+
           const stations = await Promise.all(
-            line.stations.slice(0, 5).map(async ({ id: stationId }) => {
+            line.stations.map(async ({ id: stationId }) => {
               const station = await ekiDataQueue.add(() =>
                 getStation(stationId)
               )
@@ -58,7 +60,7 @@ export default function generate () {
           return {
             ...line,
             name: await lineName,
-            stations,
+            stations: await stations,
           }
         })
       )
@@ -66,7 +68,7 @@ export default function generate () {
       return {
         id: prefecture.id,
         name: await prefectureName,
-        lines,
+        lines: await lines,
       }
     })
   )

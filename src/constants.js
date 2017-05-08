@@ -5,7 +5,7 @@ export const JAPAN_PREFECTURE_IDS = [...Array(48).keys()].slice(1)
 
 export const QUEUE_CONFIG = { concurrency: CONCURRENCY }
 
-export const TRANSLATE_TO = ['en', 'zh-CN', 'ko']
+export const TRANSLATE_TO = ['en']
 
 export const KNOWN_ADDRESS_COMPONENTS = [
   'countryCode',

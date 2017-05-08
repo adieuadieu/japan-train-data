@@ -1,6 +1,6 @@
 {
   "name": "japan-train-data",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "A circular object of train data for Japan including translations & station geocoding",
   "author": "Marco Lüthy <marco@luethy.net>",
   "keywords": [
@@ -35,7 +35,7 @@
     "lint": "npm run lint:eslint -s",
     "lint:eslint": "eslint $npm_package_config_jsSrc",
     "coverage": "nyc report",
-    "generate": "babel-node src/make.js",
+    "generate": "babel-node src/make.js --max_old_space_size=4096 --max-old-space-size=4096 --optimize_for_size --max_executable_size=4096 --stack_size=4096",
     "prepack": "prepack src/index.js --out lib/index.js",
     "build": "rollup -c",
     "dev": "rollup -c -w",
